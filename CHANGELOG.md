@@ -4,6 +4,8 @@ Each release's page on GitHub has its notes and measurements. See [the 1.0.0 rel
 
 ## Unreleased
 
+- Tests: three host tests (Qwen3.5 CUDA kept-state read-back, the grammar compile deadline, the chats resume store) wait on events instead of real-clock bounds, so a loaded CI host no longer fails them (#PR).
+
 - Load prefetch: DeepSeek's checkpoint reader makes the same number of allocations on every run, so the allocation-failure host test passes on macOS (#4344).
 
 

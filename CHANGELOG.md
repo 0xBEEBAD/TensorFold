@@ -4,6 +4,8 @@ Each release's page on GitHub has its notes and measurements. See [the 1.0.0 rel
 
 ## Unreleased
 
+- Torch .pth checkpoints: a tensor whose element count overflows u64 is refused as a bad archive instead of panicking or wrapping the count.
+
 - CI: the Zig format and TensorFold Web workflows cancel a pull request's older run when it gets a newer push, so superseded runs no longer queue; main pushes all run (#3850).
 
 
